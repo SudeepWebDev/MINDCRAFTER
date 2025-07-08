@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Legal documents for Mind-Crafter app by MINDCRAFTER INSTITUTE - Privacy Policy and Terms of Service">
-    <meta name="keywords" content="Mind-Crafter, MINDCRAFTER INSTITUTE, privacy policy, terms of service, legal documents">
+    <meta name="description" content="Legal documents for Mind-Crafter app by MINDCRAFTER INSTITUTE - Privacy Policy, Terms of Service, and Account Deletion Instructions">
+    <meta name="keywords" content="Mind-Crafter, MINDCRAFTER INSTITUTE, privacy policy, terms of service, account deletion">
     <meta name="author" content="MINDCRAFTER INSTITUTE Development Team">
     <title>Mind-Crafter Legal Documents - MINDCRAFTER INSTITUTE</title>
-    
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="../assets/logo.jpg">
-    
     <style>
         * {
             margin: 0;
@@ -189,19 +186,15 @@
             .container {
                 margin: 10px;
             }
-            
             .header {
                 padding: 30px 20px;
             }
-            
             .content {
                 padding: 30px 20px;
             }
-            
             .header h1 {
                 font-size: 24px;
             }
-            
             .legal-links {
                 grid-template-columns: 1fr;
             }
@@ -219,36 +212,44 @@
         <div class="content">
             <div class="intro">
                 <h2>Legal Documentation Center</h2>
-                <p>Welcome to the legal documentation center for Mind-Crafter, the official educational management app for MINDCRAFTER INSTITUTE. Here you can access our Privacy Policy and Terms of Service.</p>
+                <p>Welcome to the legal documentation center for Mind-Crafter, the official educational management app for MINDCRAFTER INSTITUTE. Here you can access our Privacy Policy, Terms of Service, and Account Deletion Instructions.</p>
             </div>
-            
+
             <div class="update-info">
                 <h4>📅 Last Updated: June 8, 2025</h4>
                 <p>All legal documents are current and comply with COPPA, FERPA, and GDPR regulations for educational applications.</p>
             </div>
-            
+
             <div class="legal-links">
                 <a href="privacy-policy.html" class="legal-card">
                     <span class="icon">🔒</span>
                     <h3>Privacy Policy</h3>
                     <p>Learn how we collect, use, protect, and manage your personal information in compliance with educational privacy laws including COPPA, FERPA, and GDPR.</p>
                 </a>
-                
+
                 <a href="terms-of-service.html" class="legal-card">
                     <span class="icon">📋</span>
                     <h3>Terms of Service</h3>
                     <p>Read the terms and conditions that govern your use of the Mind-Crafter application and MINDCRAFTER INSTITUTE educational services.</p>
                 </a>
+
+                <a href="delete-account.html" class="legal-card">
+                    <span class="icon">🗑️</span>
+                    <h3>Delete Account</h3>
+                    <p>Instructions to request deletion of your Mind-Crafter account and associated data. We ensure full compliance with data removal laws and transparency.</p>
+                </a>
             </div>
-              <div class="update-info">
+
+            <div class="update-info">
                 <h4>🏛️ MINDCRAFTER INSTITUTE - New Delhi, India</h4>
                 <p>This application is exclusively designed for MINDCRAFTER INSTITUTE students, faculty, and staff located in New Delhi, India. Access is restricted to authorized users only.</p>
             </div>
         </div>
-        
+
         <div class="footer">
             <p><strong>MINDCRAFTER INSTITUTE Development Team</strong></p>
-            <p>© 2025 MINDCRAFTER INSTITUTE. All rights reserved.</p>            <div class="links">
+            <p>© <span id="year">2025</span> MINDCRAFTER INSTITUTE. All rights reserved.</p>
+            <div class="links">
                 <a href="https://github.com/YourUsername/Mind-Crafter" target="_blank">GitHub Repository</a>
                 <a href="mailto:mindcrafter29@gmail.com">Contact Institute</a>
                 <a href="mailto:sudeepwebdev@outlook.com">Contact Developer</a>
@@ -257,41 +258,10 @@
             </div>
         </div>
     </div>
-    
+
     <script>
-        // Add some interactive functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add click tracking for analytics (if needed)
-            const legalCards = document.querySelectorAll('.legal-card');
-            legalCards.forEach(card => {
-                card.addEventListener('click', function(e) {
-                    const cardType = this.querySelector('h3').textContent;
-                    console.log(`Legal document accessed: ${cardType}`);
-                    
-                    // Add a subtle loading animation
-                    this.style.transform = 'scale(0.98)';
-                    setTimeout(() => {
-                        this.style.transform = '';
-                    }, 150);
-                });
-            });
-            
-            // Add last modified date check
-            const lastModified = new Date(document.lastModified);
-            const currentYear = new Date().getFullYear();
-            
-            // Update copyright year if needed
-            const copyrightElement = document.querySelector('.footer p:last-of-type');
-            if (copyrightElement) {
-                copyrightElement.innerHTML = copyrightElement.innerHTML.replace('2025', currentYear);
-            }
-        });
-        
-        // Add keyboard navigation support
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                window.history.back();
-            }
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('#year').textContent = new Date().getFullYear();
         });
     </script>
 </body>
